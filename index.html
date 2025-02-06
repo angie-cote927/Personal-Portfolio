@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        @import url(./Fonts/bergamo-std/BergamoStd-Regular.otf);
+
+        @theme{
+            --font-bergamo-regular: "Bergamo-Regular", sans-serif;
+        }
+    </style>
+    <title>Angie Cote</title>
+</head>
+<body class="bg-[url(./Images/Hercules-Room-Ceiling-Painting-France.jpg)] bg-cover">
+    <div class="flex">
+        <div class="bg-black/50 w-100 h-90 rounded-lg flex flex-col m-20 items-center">
+            <img src="./Images/me for portfolio.png" alt="Image of me (Angie) made to look like a painting" class="rounded-2xl w-80 h-60 m-5">
+            <p class="text-center text-white font-serif">My name is Angie Cote, and I am currently a full-time student at West-MEC for full-stack web development.</p>
+        </div>
+
+        <div class="flex flex-col m-20 justify-center">
+            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl --font-bergamo-regular">Work</a>
+            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl">About</a>
+            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
