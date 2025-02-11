@@ -3,28 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
-        @import url(./Fonts/bergamo-std/BergamoStd-Regular.otf);
+    <script
+         src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous">
+    </script>
 
-        @theme{
-            --font-bergamo-regular: "Bergamo-Regular", sans-serif;
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Angie Cote</title>
+    <style>
+        @font-face {
+            font-family: Bergamo Regular;
+            src: url(./Fonts/bergamo-std/BergamoStd-Regular.otf);
+        }
+
+        .font-bergamo{
+            font-family: Bergamo Regular;
         }
     </style>
-    <title>Angie Cote</title>
 </head>
 <body class="bg-[url(./Images/Hercules-Room-Ceiling-Painting-France.jpg)] bg-cover">
-    <div class="flex">
-        <div class="bg-black/50 w-100 h-90 rounded-lg flex flex-col m-20 items-center">
-            <img src="./Images/me for portfolio.png" alt="Image of me (Angie) made to look like a painting" class="rounded-2xl w-80 h-60 m-5">
-            <p class="text-center text-white font-serif">My name is Angie Cote, and I am currently a full-time student at West-MEC for full-stack web development.</p>
+    <div class="flex justify-evenly items-center h-[100vh]">
+        <div class="bg-black/50 w-120 h-110 rounded-lg flex flex-col m-20 items-center justify-center">
+            <img src="./Images/me for portfolio.png" alt="Image of me (Angie) made to look like a painting" class="rounded-2xl w-100 h-80 m-5">
+            <p class="text-center text-white font-bergamo">My name is Angie Cote, and I am currently a full-time student at West-MEC for full-stack web development.</p>
         </div>
 
         <div class="flex flex-col m-20 justify-center">
-            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl --font-bergamo-regular">Work</a>
-            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl">About</a>
-            <a href="#" class="text-white mx-10 my-5 font-serif text-7xl">Contact</a>
+            <div class="flex items-center">
+                <a href="https://github.com/angie-cote927" class="text-white mx-10 my-5 font-bergamo text-7xl hover:underline hover:italic hover:ml-15" id="work">Work</a>
+                <img src="./Images/arrow-svgrepo-com.svg" alt="Arrow pointing at the work link" class="w-10 h-10 arrow work">
+            </div>
+            <div class="flex items-center">
+                <a href="#" class="text-white mx-10 my-5 font-bergamo text-7xl hover:underline hover:italic hover:ml-15" id="about">About</a>
+                <img src="./Images/arrow-svgrepo-com.svg" alt="Arrow pointing at the about link" class="w-10 h-10 arrow about">
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:mcote7243@gmail.com" class="text-white mx-10 my-5 font-bergamo text-7xl hover:underline hover:italic hover:ml-15" id="contact">Contact</a>
+                <img src="./Images/arrow-svgrepo-com.svg" alt="Arrow pointing at the contact link" class="w-10 h-10 arrow contact">
+            </div>
         </div>
+        </div>
+        <div class="flex bg-orange-200">
+            <div class="bg-black/50 w-120 h-120 m-5 text-white font-bergamo rounded-lg p-3 text-center">
+                <h2 class="text-2xl font-bold">JS Only Animal Crossing Site</h2>
+                <img src="" alt="">
+                <p>This is a site where I used only JavaScript in order to make all of the elements, the responsiveness, the styling, and everything.</p>
+                <a href="https://angie-cote927.github.io/JS-Only-Website/" class="hover:underline hover:italic">Link To The Page</a>
+            </div>
+            <div class="bg-black/50 w-120 h-120 m-5 text-white font-bergamo rounded-lg p-3 text-center">
+                <h2 class="text-2xl font-bold">Event Countdown</h2>
+                <img src="./Images/countdown site.PNG" alt="Image of the countdown site with a countdown to 9/27/2025 12:00 titled 'Birthday' running." class="rounded-2xl mt-2">
+                <p class="mt-2 mb-2">This is a site where you can put in any date, as well as any name, and have an accurate countdown timer to when the event will be!</p>
+                <a href="https://angie-cote927.github.io/Holiday-Countdown/" class="hover:underline hover:italic">Link To The Page</a>
+            </div>
+            <div class="bg-black/50 w-120 h-120 m-5 text-white font-bergamo rounded-lg p-3 text-center">
+                <h2 class="text-2xl font-bold">Tailwind Profile Cards</h2>
+                <img src="./Images/tailwind site.PNG" alt="Screenshot of the tailwind profile card site with Princess Bubblegum, Raggedy Princess, and Flame Princess" class="rounded-2xl mt-6 h-75 w-115">
+                <p class="mt-6 mb-2">This is a site where I used only the CSS library Tailwind in order to make profile cards for 3 of the princesses from Adventure Time.</p>
+                <a href="#" class="hover:underline hover:italic">Link To The Page</a>
+            </div>
     </div>
+
+    <script>
+        $(function(){
+            $(".arrow").slideUp(1)
+        })
+
+        $("#work").mouseenter(function(){
+            $(".work").show(0)
+        })
+        $("#work").mouseleave(function(){
+            $(".work").hide(0)
+        })
+
+        $("#about").mouseenter(function(){
+            $(".about").show(0)
+        })
+        $("#about").mouseleave(function(){
+            $(".about").hide(0)
+        })
+
+        $("#contact").mouseenter(function(){
+            $(".contact").show(0)
+        })
+        $("#contact").mouseleave(function(){
+            $(".contact").hide(0)
+        })
+    </script>
 </body>
 </html>
